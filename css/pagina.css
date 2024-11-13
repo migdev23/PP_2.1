@@ -88,3 +88,122 @@ nav::after{
     }
   }
   
+
+/*Carrusel
+--------------------------------------------------*/
+
+.carrusel {
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  position: relative;
+}
+
+.carrusel div {
+  display: flex;
+  position: absolute;
+  animation: pasarela 10s infinite;
+  animation-timing-function: steps(var(--numeroImagenes));
+  width: calc(400px * var(--numeroImagenes));
+}
+
+.carrusel div img {
+  width: 400px;
+  height: 400px;
+  animation: slide calc(10s / var(--numeroImagenes)) ease-in-out infinite forwards;
+  opacity: 0; 
+}
+
+@keyframes pasarela {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-400px * var(--numeroImagenes)));
+  }
+}
+
+/* @keyframes slide {
+  0% {
+      transform: translateX(100%)  scale(0.8);
+      opacity: 0;
+  }
+  10% {
+      transform: translateX(0) rotate(0deg) scale(1);
+      opacity: 1;
+  }
+  90% {
+      transform: translateX(0) scale(1); 
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(-100%)  scale(0.8);
+      opacity: 0;
+  }
+} */
+
+
+@keyframes slide {
+  0% {
+      transform: translateY(-100%) scale(0.8); 
+      opacity: 0;
+  }
+  10% {
+      transform: translateY(0) scale(1);  
+      opacity: 1;
+  }
+  90% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(-100%) scale(0.8); 
+      opacity: 0;
+  }
+} 
+
+/*Modal
+--------------------------------------------------*/
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: all 0.5s;
+}
+
+.modal:target {
+  display: block;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  text-align: center;
+  width: 80%;
+  max-width: 500px;
+}
+
+.close-btn {
+  color: #333;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  text-decoration: none;
+}
+
+.close-btn:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s;
+}
