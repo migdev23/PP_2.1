@@ -5,16 +5,16 @@ class Carrusel {
         this.ocultar_todas_menos_la_primera();
         setInterval(()=>{
             this.nextImg();
-        },tiempo*1000)
+        },tiempo.split('s')[0]*1000) 
     }
 
     ocultar_todas_menos_la_primera(){
         let i = 0;
         this.imgs.forEach(img => {
             if(i!=0){
-                img.style.display = 'none'
+                img.style.display = 'none';
             }else{
-                img.style.display = 'block'
+                img.style.display = 'block';
             }
         })
     }
@@ -23,10 +23,10 @@ class Carrusel {
         this.imgs[this.indiceImg].style.display = 'none';
         if(this.imgs[this.indiceImg+1]){
             this.imgs[this.indiceImg+1].style.display = 'block';
-            this.indiceImg += 1
+            this.indiceImg += 1;
         }else{
             this.imgs[0].style.display = 'block';
-            this.indiceImg = 0
+            this.indiceImg = 0;
         }
     }
 
@@ -34,12 +34,14 @@ class Carrusel {
 
 document.querySelectorAll('.carrusel').forEach(carrusel =>{
     let imgs = [];
+    const widthCarrusel = carrusel.clientWidth;
+    const tiempo = carrusel.getAttribute('data-tiempo');
     carrusel.querySelectorAll('img').forEach(img => {
-        const widthCarrusel = carrusel.clientWidth
+        img.style.animationDuration = tiempo;
         img.style.width = widthCarrusel+'px';
-        img.style.animation = 'slide 2s linear infinite'
         imgs.push(img);
     });
-    new Carrusel(imgs,2);
+
+    new Carrusel(imgs,tiempo);
 })
 

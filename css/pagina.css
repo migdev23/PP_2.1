@@ -35,7 +35,9 @@ nav::after {
 
 /* Componente Galeria
   --------------------------------------------------- */
-.galeria {}
+.galeria {
+    
+}
 
 .galeria-objeto {
     padding: 1em;
@@ -70,17 +72,16 @@ nav::after {
     height: 400px;
 }
 
-/* @keyframes pasarela {
-    0% {
-        transform: translateX(0);
-    }
+.carrusel.animacionArriba img {
+    animation:entraArriba_SaleIzquierda linear infinite;
+}
 
-    100% {
-        transform: translateX(calc(var(--anchoImagen) * var(--numeroImagenes)));
-    }
-} */
+.carrusel.animacionLateral img {
+    animation:entraSaleLaterales linear infinite;
+}
 
-/* @keyframes slide {
+
+@keyframes entraArriba_SaleIzquierda {
   0% {
       transform: translateX(100%)  scale(0.8);
       opacity: 0;
@@ -97,10 +98,10 @@ nav::after {
       transform: translateX(-100%)  scale(0.8);
       opacity: 0;
   }
-} */
+} 
 
 
-@keyframes slide {
+@keyframes entraSaleLaterales {
     0% {
         transform: translateY(-100%) scale(0.8);
         opacity: 0;
