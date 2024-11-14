@@ -24,6 +24,7 @@ nav::after {
     text-decoration: underline;
 }
 
+
 /* Variables Principales Colores
 -------------------------------------------------- */
 :root {
@@ -35,9 +36,12 @@ nav::after {
 
 /* Componente Galeria
   --------------------------------------------------- */
-.galeria {
-    
+.galeria.animacionLateral {
+    position: relative;
+    left: -100%;
+    transition: left 2s;
 }
+
 
 .galeria-objeto {
     padding: 1em;
@@ -331,4 +335,8 @@ nav::after {
     .columns:first-child {
         margin-left: 0;
     }
+}
+
+.row{
+    overflow: hidden;
 }

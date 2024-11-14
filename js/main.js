@@ -43,5 +43,9 @@ document.querySelectorAll('.carrusel').forEach(carrusel =>{
     });
 
     new Carrusel(imgs,tiempo);
-})
+});
 
+
+document.querySelectorAll('.galeria.animacionLateral').forEach(galeria =>{
+        galeria.style.left = '0%';
+})
