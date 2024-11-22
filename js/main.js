@@ -1,3 +1,4 @@
+//Carrusel
 class Carrusel {
     constructor(arr_imgs,tiempo){
         this.imgs = arr_imgs;
@@ -46,6 +47,16 @@ document.querySelectorAll('.carrusel').forEach(carrusel =>{
 });
 
 
+//GALERIA
 document.querySelectorAll('.galeria.animacionLateral').forEach(galeria =>{
         galeria.style.left = '0%';
 })
+
+
+//Acordeon
+document.querySelectorAll('.acordeon .tituloA').forEach(button => {
+    button.addEventListener('click', () => {
+        const contenido = button.nextElementSibling;
+        contenido.style.display = contenido.style.display === 'block' ? 'none' : 'block';
+    });
+});

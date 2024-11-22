@@ -1,0 +1,43 @@
+
+/* Componente Galeria
+  --------------------------------------------------- */
+.galeria{
+    position: relative;
+}
+
+.galeria.animacionLateral {
+    left: -100%;
+    transition: left 2s;
+}
+
+.galeria-objeto {
+    padding: 1em;
+}
+
+.galeria-objeto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px var(--colorSecundario);
+    transition: all 0.2s ease;
+    height: 150px;
+    width: 100%;
+    cursor: pointer;
+}
+
+
+.galeria-objeto:active{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 300px;
+    top: 50%;
+}
+
+
+.galeria-objeto:active img {
+    transform: scale(2);
+    box-shadow: 10px 10px 2px var(--colorTerciario);
+}

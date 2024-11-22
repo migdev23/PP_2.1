@@ -1,0 +1,64 @@
+
+/*Carrusel
+--------------------------------------------------*/
+
+.carrusel {
+    overflow: hidden;
+    height: 400px;
+    position: relative;
+}
+
+.carrusel img {
+    height: 400px;
+}
+
+.carrusel.animacionArriba img {
+    animation:entraArriba_SaleIzquierda linear infinite;
+}
+
+.carrusel.animacionLateral img {
+    animation:entraSaleLaterales linear infinite;
+}
+
+
+@keyframes entraArriba_SaleIzquierda {
+  0% {
+      transform: translateX(100%)  scale(0.8);
+      opacity: 0;
+  }
+  10% {
+      transform: translateX(0) rotate(0deg) scale(1);
+      opacity: 1;
+  }
+  90% {
+      transform: translateX(0) scale(1); 
+      opacity: 1;
+  }
+  100% {
+      transform: translateX(-100%)  scale(0.8);
+      opacity: 0;
+  }
+} 
+
+
+@keyframes entraSaleLaterales {
+    0% {
+        transform: translateY(-100%) scale(0.8);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    90% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(-100%) scale(0.8);
+        opacity: 0;
+    }
+} 

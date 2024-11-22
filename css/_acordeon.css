@@ -1,0 +1,22 @@
+.acordeon {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+.acordeon  .tituloA {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.item div:nth-child(2) {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+}
