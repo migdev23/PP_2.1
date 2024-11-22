@@ -1,12 +1,10 @@
 .menu {
-    background-color: red;
+    background-color: var(--colorPrincipal);
     padding: 1em;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
-
 
 .menu ul {
     display: none;
@@ -37,7 +35,6 @@
     }
 
     .horizontal.menu ul>li>a {
-        color: white;
         text-decoration: none;
         padding: 10px 15px;
         display: block;
@@ -56,7 +53,6 @@
 
     .horizontal.menu .submenu li a {
         padding: 10px;
-        color: white;
         text-decoration: none;
         display: block;
     }
@@ -74,7 +70,6 @@
     }
 
     .vertical.menu ul>li>a {
-        color: white;
         text-decoration: none;
         padding: 10px;
         display: block;
@@ -89,7 +84,6 @@
 
     .vertical.menu .submenu li a {
         padding: 10px;
-        color: white;
         text-decoration: none;
         display: block;
     }
