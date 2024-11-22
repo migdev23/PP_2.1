@@ -160,7 +160,3 @@
         margin-left: 0;
     }
 }
-
-.row{
-    overflow: var(--rowOverflow);
-}

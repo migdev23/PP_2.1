@@ -4,6 +4,8 @@
 @import url("./_galeria.css");
 @import url("./_modal.css");
 @import url("./_acordeon.css");
+@import url('./_menus.css');
+@import url('./_tooltips.css');
 
 header {
     padding: 1em;

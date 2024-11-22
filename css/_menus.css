@@ -1,0 +1,130 @@
+.menu {
+    background-color: red;
+    padding: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.menu ul {
+    display: none;
+}
+
+.menuHamburgesa {
+    width: 7%;
+    display: block;
+}
+
+.menuHamburgesa img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 550px) {
+    .menu ul {
+        display: block;
+        list-style: none;
+    }
+    .horizontal.menu ul {
+        display: flex;
+    }
+
+    .horizontal.menu ul>li {
+        position: relative;
+        margin-right: 20px;
+    }
+
+    .horizontal.menu ul>li>a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        display: block;
+    }
+
+    .horizontal.menu .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #444;
+        min-width: 160px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .horizontal.menu .submenu li a {
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    .horizontal.menu ul>li:hover>.submenu {
+        display: block;
+    }
+
+    .horizontal.menu .submenu li a:hover {
+        background-color: #555;
+    }
+
+    .vertical.menu ul>li {
+        position: relative;
+    }
+
+    .vertical.menu ul>li>a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+    }
+
+    .vertical.menu .submenu {
+        display: none;
+        background-color: #444;
+        list-style: none;
+        padding: 0;
+    }
+
+    .vertical.menu .submenu li a {
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    .vertical.menu ul>li:hover>.submenu {
+        display: block;
+    }
+
+    .vertical.menu .submenu li a:hover {
+        background-color: #555;
+    }
+
+    .submenu-left {
+        position: relative;
+    }
+
+    .submenu-left>.submenu {
+        left: -160px;
+        /* Abre a la izquierda */
+        top: 0;
+        position: absolute;
+    }
+
+    .submenu-right {
+        position: relative;
+    }
+
+    .submenu-right>.submenu {
+        left: 160px;
+        /* Abre a la derecha */
+        top: 0;
+        position: absolute;
+    }
+
+    .menuHamburgesa {
+        display: none;
+    }
+}
