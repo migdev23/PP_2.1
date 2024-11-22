@@ -54,7 +54,7 @@ document.querySelectorAll('.galeria.animacionLateral').forEach(galeria =>{
 
 
 //Acordeon
-document.querySelectorAll('.acordeon .tituloA').forEach(button => {
+document.querySelectorAll('.acordeon .tituloAcordeon').forEach(button => {
     button.addEventListener('click', () => {
         const contenido = button.nextElementSibling;
         contenido.style.display = contenido.style.display === 'block' ? 'none' : 'block';
