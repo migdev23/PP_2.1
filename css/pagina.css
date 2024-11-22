@@ -6,29 +6,3 @@
 @import url("./_acordeon.css");
 @import url('./_menus.css');
 @import url('./_tooltips.css');
-
-header {
-    padding: 1em;
-}
-
-nav ul li {
-    list-style: none;
-    float: left;
-    padding: 1em;
-}
-
-nav ul li a {
-    font-size: 1.5em;
-    color: black;
-    text-decoration: none;
-}
-
-
-nav::after {
-    clear: both;
-}
-
-.titulo {
-    font-size: 1.7em;
-    text-decoration: underline;
-}
