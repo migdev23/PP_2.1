@@ -1,0 +1,21 @@
+select{
+    width: 100%;
+    min-height: 50px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+input[type='time']{
+    padding: 1em;
+    cursor: pointer;
+}
+
+textarea{
+    width: 100%;
+    padding: 1em;
+    min-height: 200px;
+}
+
+label{
+    padding: 0.5em 0;
+}

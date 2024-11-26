@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Alertas</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/pagina.css">
+    <link rel="stylesheet" href="./css/_formularios.css">
+    <style>
+        .historial-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #ddd;
+            border-radius: 1em;
+            padding: 1em;
+            margin-bottom: 1em;
+            background-color: #f9f9f9;
+        }
+
+        .historial-item .descripcion {
+            flex: 1;
+            margin-right: 1em;
+            word-wrap: break-word;
+        }
+
+        .historial-item button {
+            margin: 0 0.3em;
+            cursor: pointer;
+        }
+
+        @keyframes animacionArriba {
+            0% {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .animacion {
+            opacity: 0; 
+            animation: animacionArriba 1s ease-out forwards;
+        }
+     
+        .animacion:first-of-type {
+            animation-delay: 0.3s;
+        }
+
+        .animacion:last-of-type {
+            animation-delay: 0.6s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="five columns animacion">
+                <h3>Enviar alertas</h3>
+                <form action="#">
+                    <div>
+                        <label for="destinatario">Destinatario</label>
+                        <select name="destinatarioAlerta" id="destinatario">
+                            <option value="User 1">Usuario 1</option>
+                            <option value="User 2">Usuario 2</option>
+                            <option value="User 3">Usuario 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="nivelAlerta">Nivel de Alerta</label>
+                        <select name="nivelAlerta" id="nivelAlerta">
+                            <option value="leve">Leve</option>
+                            <option value="media">Media</option>
+                            <option value="importante">Importante</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="horaAlerta">Introduce la hora a la que se mandará</label>
+                        <input type="time" id="horaAlerta">
+                    </div>
+
+                    <div>
+                        <label for="descripcion">Descripción Alerta</label>
+                        <textarea name="descripcionAlert" id="descripcion" placeholder="Introduce una descripción de la alerta"></textarea>
+                    </div>
+
+                    <input type="submit" class="button-primary" value="Enviar Alerta">
+                </form>
+            </div>
+
+            <div class="two columns"></div>
+
+
+            <div class="five columns animacion">
+                <div class="container container-historial">
+                    <h3>Historial de Alertas</h3>
+
+                    <div class="historial-item">
+                        <div class="descripcion">Descripción de la alerta 1. Aquí va un texto largo que puede ocupar varias líneas si es necesario.</div>
+                        <button class="button-primary">Editar</button>
+                        <button class="button-primary">Eliminar</button>
+                    </div>
+
+                    <div class="historial-item">
+                        <div class="descripcion">Descripción de la alerta 2. Este es otro ejemplo de texto descriptivo.</div>
+                        <button class="button-primary">Editar</button>
+                        <button class="button-primary">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
