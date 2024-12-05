@@ -60,3 +60,16 @@ document.querySelectorAll('.acordeon .tituloAcordeon').forEach(button => {
         contenido.style.display = contenido.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+//TABS
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.querySelector('.tabsOptions div:first-of-type').classList.add("active");
+    tab.querySelector('.contentTab').innerText = tab.querySelector('.tabsOptions div:first-of-type div').innerText;
+    tab.querySelectorAll('.tabsOptions div').forEach((element, index) => {
+        element.addEventListener('click', ()=> {
+            tab.querySelectorAll('.tabsOptions div').forEach(element => element.classList.remove("active"));
+            element.classList.add('active');
+            tab.querySelector('.contentTab').innerText = element.querySelector('div').innerText;       
+        });
+    });
+});
