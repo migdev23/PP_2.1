@@ -1,0 +1,23 @@
+.acordeon {
+    margin: auto;
+    padding: 1em;
+}
+
+.acordeon .tituloAcordeon {
+    padding: 1em;
+    cursor: pointer;
+    background: #dad8d8;
+    margin: 0;
+    transition: all 100ms;
+    border-bottom: 1px solid #9b9a9a;
+}
+
+.acordeon .tituloAcordeon:hover{
+    background: #333;
+    color: white;
+}
+
+.item div:nth-child(2) {
+    display: none;
+    padding: 1em;
+}

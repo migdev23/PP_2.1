@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Alertas</title>
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/pagina.css">
+  <link rel="stylesheet" href="./css/_menus.css">
+  <link rel="stylesheet" href="./css/acordeon.css">
+  
+  <!-- Font Awesome para íconos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  
+  <style>
+
+    .menuPerfil {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .menuPerfil i {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .alert-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+    }
+
+    .alert-actions button {
+      background: #fff;
+      border: 1px solid #bbb;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    .alert-actions button:hover {
+      background: #eee;
+    }
+
+    .alert-actions .tick {
+      color: green;
+      font-size: 20px;
+    }
+
+    .alert-actions .x {
+      color: red;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+    <!-- Menú -->
+    <nav class="menu">
+      <div class="menuHamburgesa">
+        <img src="./images/menu.png" alt="Menú" width="30">
+      </div>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Alertas</a></li>
+        <li><a href="#">Configuración</a></li>
+      </ul>
+      
+
+      <div class="menuPerfil">
+        <i class="fas fa-user"></i>
+      </div>
+    </nav>
+  
+    <div class="container">
+        <h1>Gestión de Alertas</h1>
+        <div class="row">
+            <!-- Acordeón -->
+            <div class="eight columns acordeon">
+              <div class="item">
+                  <div class="tituloAcordeon">Alerta 1</div>
+                  <div>
+                  <p>Descripción de la alerta 1. Detalles sobre el evento.</p>
+                  <div class="alert-actions">
+                      <button class="tick">&#10003; Hecho</button>
+                      <button class="x">&#10007; Eliminar</button>
+                  </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="tituloAcordeon">Alerta 2</div>
+                  <div>
+                  <p>Descripción de la alerta 2. Detalles sobre el evento.</p>
+                  <div class="alert-actions">
+                      <button class="tick">&#10003; Hecho</button>
+                      <button class="x">&#10007; Eliminar</button>
+                  </div>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="tituloAcordeon">Alerta 3</div>
+                  <div>
+                  <p>Descripción de la alerta 3. Detalles sobre el evento.</p>
+                  <div class="alert-actions">
+                      <button class="tick">&#10003; Hecho</button>
+                      <button class="x">&#10007; Eliminar</button>
+                  </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  
+    <script>
+      // Interacción del acordeón
+      document.querySelectorAll('.tituloAcordeon').forEach(titulo => {
+        titulo.addEventListener('click', () => {
+          const content = titulo.nextElementSibling;
+          content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+      });
+  
+      // Menú desplegable
+      const menuHamburgesa = document.querySelector('.menuHamburgesa');
+      const menu = document.querySelector('.menu ul');
+      menuHamburgesa.addEventListener('click', () => {
+        menu.classList.toggle('visible');
+      });
+    </script>
+</body>
+</html>
