@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Alertas</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/skeleton.css">
+    <link rel="stylesheet" href="./css/pagina.css">
+    <link rel="stylesheet" href="./css/_formularios.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="six columns pad-5 animacionArriba-1s --delay-03s">
+                <h3>Enviar alertas</h3>
+                <form action="#">
+                    <div>
+                        <label for="destinatario">Destinatario</label>
+                        <select name="destinatarioAlerta" id="destinatario">
+                            <option value="User 1">Usuario 1</option>
+                            <option value="User 2">Usuario 2</option>
+                            <option value="User 3">Usuario 3</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="nivelAlerta">Nivel de Alerta</label>
+                        <select name="nivelAlerta" id="nivelAlerta">
+                            <option value="leve">Leve</option>
+                            <option value="media">Media</option>
+                            <option value="importante">Importante</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="horaAlerta">Introduce la hora a la que se mandará</label>
+                        <input type="time" id="horaAlerta">
+                    </div>
+
+                    <div>
+                        <label for="descripcion">Descripción Alerta</label>
+                        <textarea name="descripcionAlert" id="descripcion" placeholder="Introduce una descripción de la alerta"></textarea>
+                    </div>
+
+                    <input type="submit" class="button-primary" value="Enviar Alerta">
+                </form>
+            </div>
+
+            <div class="six columns pad-5 animacionArriba-1s --delay-06s">
+                <div class="container-historial">
+                    <h3>Historial de Alertas</h3>
+
+                    <div class="card">
+                        <p>Descripción de la alerta 1. Aquí va un texto largo que puede ocupar varias líneas si es necesario.</p>
+                        <button class="button-primary">Editar</button>
+                        <button class="button-primary">Eliminar</button>
+                    </div>
+
+                    <div class="card">
+                        <p>Descripción de la alerta 2. Este es otro ejemplo de texto descriptivo.</p>
+                        <div class="row space-around">
+                            <button class="button-primary six columns">Editar</button>
+                            <button class="button-primary six columns">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

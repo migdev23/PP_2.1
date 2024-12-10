@@ -1,8 +1,21 @@
 /* Variables Principales Colores
 -------------------------------------------------- */
-:root {
-    --colorPrincipal: #B38D97;
-    --colorSecundario: #D5ACA9;
-    --colorTerciario: #EBCFB2;
-    --colorCuaternario: #d1a7b1;
-}
+$colorPrincipal: #B38D97;
+$colorSecundario: #D5ACA9;
+$colorTerciario: #EBCFB2;
+$colorCuaternario: #d1a7b1;
+
+//MATRIZ
+// $colores: (
+//     'principal':'#B38D97',
+//     'secundario':'#D5ACA9',
+//     'terciario':'#EBCFB2',
+//     'cuaternario':'#d1a7b1'
+// );
+
+//RECORRER MATRIZ
+// @each $color, $valor in $colores {
+//     .color-#{$color}{
+//         color: $valor;
+//     }
+// }

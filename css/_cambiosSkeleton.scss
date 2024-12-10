@@ -150,6 +150,7 @@
 }
 
 @media (min-width: 550px) {
+
     .column,
     .columns {
         margin-left: 0;
@@ -161,7 +162,64 @@
     }
 }
 
+/*Botones*/
 
-.container{
-    max-width: none;
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary {
+    background-color: $colorSecundario;
+    border-color: $colorCuaternario;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+    background-color: $colorTerciario;
+    border-color: $colorCuaternario;
+}
+
+button {
+    width: 100%;
+}
+
+/*Margin y padding*/
+
+@for $i from 1 through 6 {
+    .pad-#{$i} {
+        padding: #{$i}rem;
+    }
+
+    .mar-#{$i} {
+        margin: #{$i}rem;
+    }
+
+    .mar-l-#{$i} {
+        margin-left: #{$i}rem;
+    }
+
+    .mar-r-#{$i} {
+        margin-right: #{$i}rem;
+    }
+
+    .mar-t-#{$i} {
+        margin-top: #{$i}rem;
+    }
+
+    .mar-b-#{$i} {
+        margin-bottom: #{$i}rem;
+    }
+
+}
+
+.columns.centrado {
+    text-align: center;
 }

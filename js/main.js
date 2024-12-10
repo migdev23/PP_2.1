@@ -61,6 +61,19 @@ document.querySelectorAll('.acordeon .tituloAcordeon').forEach(button => {
     });
 });
 
+//TABS
+document.querySelectorAll('.tab').forEach(tab => {
+    tab.querySelector('.tabsOptions div:first-of-type').classList.add("active");
+    tab.querySelector('.contentTab').innerText = tab.querySelector('.tabsOptions div:first-of-type div').innerText;
+    tab.querySelectorAll('.tabsOptions div').forEach((element, index) => {
+        element.addEventListener('click', ()=> {
+            tab.querySelectorAll('.tabsOptions div').forEach(element => element.classList.remove("active"));
+            element.classList.add('active');
+            tab.querySelector('.contentTab').innerText = element.querySelector('div').innerText;       
+        });
+    });
+});
+
 //modo Claro Oscuro
 const button = document.getElementById('toggle-mode-claro-oscuro');
 
