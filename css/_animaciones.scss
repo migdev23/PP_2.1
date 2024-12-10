@@ -1,0 +1,25 @@
+/*Los elementos suben hacia arriba partiendo de 50px desde abajo y se van haciendo solidos*/
+@keyframes animacionArriba {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+.animacionArriba-1s{
+    opacity: 0; 
+    animation: animacionArriba 1s ease-out forwards;
+}
+
+.--delay-03s {
+    animation-delay: 0.3s;
+}
+
+.--delay-06s {
+    animation-delay: 0.6s;
+}

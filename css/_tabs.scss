@@ -1,0 +1,43 @@
+.tab{
+    .tabsOptions{
+        display: flow-root;
+        div{
+            float: left;
+            background: $colorPrincipal;
+            border: 1px solid black;
+            border-bottom: none;
+            border-radius: 0.7em 0.7em 0 0;
+            margin-left: 0.1em;
+            transition: all 200ms;
+            
+            cursor: pointer;
+    
+            &:first-of-type{
+                margin-left: 0em;
+            }
+
+            &.active{
+                background: $colorSecundario;
+                transform: translateY(1px);
+                border-bottom: none;
+            }
+            
+            
+            div{
+                display: none;
+            }
+
+            h3{
+                padding: 0.3em;
+                margin: 0;
+            }
+        }
+
+    }
+    
+    .contentTab{
+        background: $colorSecundario;
+        border: 1px solid black;
+        padding: 1em;
+    }
+}

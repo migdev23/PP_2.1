@@ -9,60 +9,12 @@
     <link rel="stylesheet" href="./css/skeleton.css">
     <link rel="stylesheet" href="./css/pagina.css">
     <link rel="stylesheet" href="./css/_formularios.css">
-    <style>
-        .historial-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border: 1px solid #ddd;
-            border-radius: 1em;
-            padding: 1em;
-            margin-bottom: 1em;
-            background-color: #f9f9f9;
-        }
-
-        .historial-item .descripcion {
-            flex: 1;
-            margin-right: 1em;
-            word-wrap: break-word;
-        }
-
-        .historial-item button {
-            margin: 0 0.3em;
-            cursor: pointer;
-        }
-
-        @keyframes animacionArriba {
-            0% {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        .animacion {
-            opacity: 0; 
-            animation: animacionArriba 1s ease-out forwards;
-        }
-     
-        .animacion:first-of-type {
-            animation-delay: 0.3s;
-        }
-
-        .animacion:last-of-type {
-            animation-delay: 0.6s;
-        }
-
-    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <div class="five columns animacion">
+            <div class="six columns pad-5 animacionArriba-1s --delay-03s">
                 <h3>Enviar alertas</h3>
                 <form action="#">
                     <div>
@@ -97,23 +49,22 @@
                 </form>
             </div>
 
-            <div class="two columns"></div>
-
-
-            <div class="five columns animacion">
-                <div class="container container-historial">
+            <div class="six columns pad-5 animacionArriba-1s --delay-06s">
+                <div class="container-historial">
                     <h3>Historial de Alertas</h3>
 
-                    <div class="historial-item">
-                        <div class="descripcion">Descripción de la alerta 1. Aquí va un texto largo que puede ocupar varias líneas si es necesario.</div>
+                    <div class="card">
+                        <p>Descripción de la alerta 1. Aquí va un texto largo que puede ocupar varias líneas si es necesario.</p>
                         <button class="button-primary">Editar</button>
                         <button class="button-primary">Eliminar</button>
                     </div>
 
-                    <div class="historial-item">
-                        <div class="descripcion">Descripción de la alerta 2. Este es otro ejemplo de texto descriptivo.</div>
-                        <button class="button-primary">Editar</button>
-                        <button class="button-primary">Eliminar</button>
+                    <div class="card">
+                        <p>Descripción de la alerta 2. Este es otro ejemplo de texto descriptivo.</p>
+                        <div class="row space-around">
+                            <button class="button-primary six columns">Editar</button>
+                            <button class="button-primary six columns">Eliminar</button>
+                        </div>
                     </div>
                 </div>
             </div>
