@@ -60,3 +60,14 @@ document.querySelectorAll('.acordeon .tituloAcordeon').forEach(button => {
         contenido.style.display = contenido.style.display === 'block' ? 'none' : 'block';
     });
 });
+
+//modo Claro Oscuro
+const button = document.getElementById('toggle-mode-claro-oscuro');
+
+button.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  button.textContent = 
+    document.body.classList.contains('dark-mode') 
+      ? 'Cambiar a modo claro' 
+      : 'Cambiar a modo oscuro';
+});
